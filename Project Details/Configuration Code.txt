@@ -1,0 +1,94 @@
+....................................
+Firware
+----------------------
+
+1.................
+en
+sh runn
+conf t
+no dhcpd address 192.168.1.5-192.168.1.36 inside
+cont t
+int vlan 1
+ip add (your ip)
+no shut
+
+
+nameif inside
+securit
+security-level 100
+exit
+
+
+int e0/1
+switchport access vlan 1
+exit
+
+
+int vlan 2
+..........................................
+
+
+
+********************
+ router ISP
+
+2.............
+
+en
+conf t
+int f0/0
+ip add (--------------)
+no shut
+
+
+int f0/1
+ip add (--------------)
+no shut
+
+
+
+3..................
+FW
+=======
+dhcpd address 10.1.1.10-10.1.1.40 inside
+dhcpd dns 8.8.8.8 interface inside
+
+5-------------------
+
+deafult routing
+route outside 0.0.0.0 0.0.0.0 50.1.1.1
+
+6..........................
+
+Router
+
+en
+conf t
+router ospf ?
+router ospf 1
+net 50.0.0.0 0.255.255.255 area 0
+net 8.0.0.0 0.255.255.255 area 0
+
+7..............
+
+fw
+
+ciscoasa(config)#object network ?
+
+ciscoasa(config)#object network LAN
+ciscoasa(config-network-object)#subnet 10.0.0.0 255.0.0.0
+
+ciscoasa(config-network-object)#nat ?
+ciscoasa(config-network-object)#nat (inside,outside) dynamic interface
+
+
+8................
+ciscoasa(config)#access-list ofi extended permit tcp any any
+ciscoasa(config)#access-list ofi extended permit icmp any any
+
+ciscoasa(config)#access-group ofi out interface outside
+ciscoasa(config)#access-group ofi in interface outside
+
+
+
+

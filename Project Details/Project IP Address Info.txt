@@ -1,0 +1,75 @@
+
+Hasibul Islam Nirob
+
+--------------------------------------------------------
+
+5505 ASA 
+-------------------
+www.sonalibank.com
+---------------
+
+IOT Devices
+
+IOT Server IP = 192.168.12.5
+IOT PC IP = 192.168.12.1
+
+Home Router 1  IP => 192.168.12.10
+Home Router 2  IP => 192.168.12.11
+Home Router 3  IP => 192.168.12.12
+Home Router 4  IP => 192.168.12.13
+
+IOT Devices => (192.168.12.50 <to> 192.168.12.96)
+
+---------------
+
+Server PT
+-------------------------
+Server IP (10.1.1.1 to 10.1.1.10)
+
+DNS Server  192.168.11.1
+FTP Server  192.168.11.2
+HTTP        192.168.11.3
+Mail Server 192.168.11.4
+IOT Server  192.168.12.5
+
+
+192.168.11.101 -- 192.168.11.1 
+
+---------------------
+PC-PT
+PC-PT (P0 -- 60) = 60+1 = 61 Devices
+
+PC IP Address = ( 192.168.11.100 to 192.168.11.161) 192.168.11.101
+
+Gmail Name => @sbank.com
+Mail Address => sbp1@sonalibank.com
+UserName => sbp0 to sbp60
+Password => 123
+
+p0 -> 
+sbp0 to sbp61
+sbp0@sonalibank.com <to> sbp61@sonalibank.com
+
+sbp1@sonalibank.com
+192.168.11.4
+
+--------------------------------------
+IP Phone
+7960 IP Phone (0-19) = 19+1 = 20 pis
+
+
+---------------------------
+Printer-PT
+Printer (0-31) = 32 pis
+
+Printer IP Address => ( 192.168.11.200 <to> 192.168.11.231 )
+
+
+--------------------------------
+Switch
+
+2960-24TC Switch ( 4 )
+
+-------------------
+
+
